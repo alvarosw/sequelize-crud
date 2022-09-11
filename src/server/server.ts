@@ -1,4 +1,5 @@
 import { Server, IncomingMessage, ServerResponse } from 'http'
+import routes from '../api/routes'
 import express from 'express'
 const app = express()
 
@@ -7,6 +8,7 @@ const apiVersion = process.env.API_VERSION
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.use(`/api/${apiVersion}`, routes)
 
 let server: Server<typeof IncomingMessage, typeof ServerResponse>
 
