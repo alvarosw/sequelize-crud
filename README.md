@@ -1,4 +1,5 @@
-# Seven INC
+# Sequelize Crud
+### A crud with sequelize
 
 ## How to run:
 
